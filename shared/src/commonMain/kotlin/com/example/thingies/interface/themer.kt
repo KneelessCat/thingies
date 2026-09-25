@@ -1,4 +1,4 @@
-package com.example.thingies
+package com.example.thingies.`interface`
 
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
@@ -8,7 +8,7 @@ import androidx.compose.runtime.Composable
 fun AppThemer(
     // light mode is either true or false, we have the win98 default colour scheme, or a darker one
     // This is monitored in App.kt so change happens in there
-    lightMode: Boolean = true,
+    lightMode: Boolean,
 
     // This means the AppThemer looks like:
     // AppThemer(true/false) {@Composable function}

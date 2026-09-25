@@ -1,12 +1,13 @@
-package com.example.thingies
+package com.example.thingies.`interface`
 
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.ui.graphics.Color
 
+// win 98 = 0xFFFF3200
 val lightColours = lightColorScheme (
-    primary = Color(0xFFFF3200),
-    onPrimary = Color(0xFFFF3200),
+    primary = Color(0xFFDBDBDB),
+    onPrimary = Color(0xFF000000),
 
     primaryContainer = Color(0xFFFF3200),
     onPrimaryContainer = Color(0xFFFF3200),
@@ -23,7 +24,7 @@ val lightColours = lightColorScheme (
     tertiaryContainer = Color(0xFFFF3200),
     onTertiaryContainer = Color(0xFFFF3200),
 
-    background = Color(0xFF008080),
+    background = Color(0xFFFFFFFFF),
     onBackground = Color(0xFFFF3200),
 
     surface = Color(0xFFFF3200),
@@ -31,20 +32,20 @@ val lightColours = lightColorScheme (
 )
 
 val darkColours = darkColorScheme(
-    primary = Color(0xFFFFFFFF),
+    primary = Color(0xFF6D6D6D),
     onPrimary = Color(0xFFFFFFFF),
-    primaryContainer = Color(0xFFFFFFFF),
-    onPrimaryContainer = Color(0xFFFFFFFF),
+    primaryContainer = Color(0xFF000000),
+    onPrimaryContainer = Color(0xFF000000),
 
-    secondary = Color(0xFFFFFFFF),
-    secondaryContainer = Color(0xFFFFFFFF),
-    onSecondary = Color(0xFFFFFFFF),
-    onSecondaryContainer = Color(0xFFFFFFFF),
+    secondary = Color(0xFF000000),
+    secondaryContainer = Color(0xFF000000),
+    onSecondary = Color(0xFF000000),
+    onSecondaryContainer = Color(0xFF000000),
 
-    tertiary = Color(0xFFFFFFFF),
-    onTertiary = Color(0xFFFFFFFF),
-    onTertiaryContainer = Color(0xFFFFFFFF),
+    tertiary = Color(0xFF000000),
+    onTertiary = Color(0xFF000000),
+    onTertiaryContainer = Color(0xFF000000),
 
-    background = Color(0xFFFFFFFF),
-    surface = Color(0xFFFFFFFF),
+    background = Color(0xFF000000),
+    surface = Color(0xFF000000),
 )

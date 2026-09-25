@@ -1,0 +1,42 @@
+fun todaysDate(date: Boolean): String {
+    // Gets current time
+    val now = Clock.System.now()
+    val zone = TimeZone.currentSystemDefault()
+
+    // This removes the T that splits the dd/mm/yyyy and the hh/mm/ss times
+    // Format typically looks like yyyy-mm-ddThh/mm/ss.ms (ms extends for 9 digits) - we remove this in the h/m/s display
+    // We use the boolean value date to determine if we return y/m/d or h/m/s
+    if (date) {
+        return now.toLocalDateTime(zone).toString().substringBefore('T')
+    }
+    else {
+        return now.toLocalDateTime(zone).toString().substringAfter('T').substringBefore('.')
+    }
+}
+
+
+            // Displays current date
+            Text(
+                text = "Today's date is ${todaysDate(true)} and the time is ${todaysDate(false)}",
+                modifier = Modifier.padding(20.dp),
+                color = MaterialTheme.colorScheme.onSurface,
+                fontSize = 24.sp,
+                textAlign = TextAlign.Center
+            )
+
+            // Inverts the current value of show content when clicked
+            Button(onClick = { showContent = !showContent /*; lightMode = !lightMode }*/ }) {
+                Text("Click me!")
+            }
+            // Observes showContent, so whenever is it changed it is recomposed
+            AnimatedVisibility(showContent) {
+                val greeting = remember { Greeting().greet() }
+                Column(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalAlignment = Alignment.CenterHorizontally,
+                ) {
+                    // Loads the xml file "compose_multiplatform.xml"
+                    Image(painterResource(Res.drawable.compose_multiplatform), null)
+                    Text("Compose: $greeting")
+                }
+            }
